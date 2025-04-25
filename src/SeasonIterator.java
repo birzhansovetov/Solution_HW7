@@ -7,11 +7,11 @@ public class SeasonIterator implements EpisodeIterator {
     public SeasonIterator(List<Episode> episodes) {
         this.episodes = episodes;
     }
-
+    @Override
     public boolean hasNext() {
         return index < episodes.size();
     }
-
+    @Override
     public Episode next() {
         return episodes.get(index++);
     }
